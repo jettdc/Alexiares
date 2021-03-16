@@ -1,0 +1,38 @@
+{
+    "id": 1,
+    "name": "Netgear Nighthawk R6700 - AC1750",
+    "type": "router",
+    "site_id": 0,
+    "mission_ids": [0,1],
+    "mission_criticalities": [2,2],
+    "fields": ["power", "connection", "fan_speed", "data_rate"],
+    "tests": [
+        {
+            "id": 0,
+            "test_classification": 2,
+            "if": [],
+            "then_conditions": [
+                {
+                    "field": "connection",
+                    "value_range": [1,1]
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "test_classification": 1,
+            "if": [
+                {
+                    "field": "connection", 
+                    "value_range": [1,1]
+                }
+            ],
+            "then_conditions": [
+                {
+                    "field": "fan_speed",
+                    "value_range": [0, 300]
+                }
+            ]
+        }
+    ]
+}

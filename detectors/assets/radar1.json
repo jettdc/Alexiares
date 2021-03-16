@@ -1,0 +1,42 @@
+{
+    "id": 0,
+    "name": "Raytheon XM100 Air Threat Radar",
+    "type": "radar",
+    "site_id": 0,
+    "mission_ids": [0],
+    "mission_criticalities": [3],
+    "fields": ["power", "connection", "voltage", "transmit_power", "temperature"],
+    "tests": [
+        {
+            "id": 0,
+            "test_classification": 2,
+            "if": [],
+            "then_conditions": [
+                {
+                    "field": "connection",
+                    "value_range": [1,1]
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "test_classification": 2,
+            "if": [
+                {
+                    "field": "connection", 
+                    "value_range": [1,1]
+                },
+                {
+                    "field": "transmit_power",
+                    "value_range": [1,12]
+                }
+            ],
+            "then_conditions": [
+                {
+                    "field": "temperature",
+                    "value_range": [20, 130]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "missions": [
+        {
+            "id": 0,
+            "name": "Air Defense",
+            "area": "North America",
+            "description": "Protecting the homeland from airbourne threats."
+        },
+        {
+            "id": 1,
+            "name": "Maritime Warning",
+            "area": "Pacific Ocean, Atlantic Ocean",
+            "description": "Detect and warn about seabourne threats to teh homeland."
+        }
+    ],
+    "sites": [
+        {
+            "id": 0,
+            "name": "Buckley Air Force Base",
+            "mission_ids": [0]
+        },
+        {
+            "id": 1,
+            "name": "Cheyenne Mountain Air Force Base",
+            "mission_ids": [0,1]
+        }
+    ]
+}
